@@ -1,106 +1,42 @@
-# Full_MERN_Stack_Ecommerce_Project
-1. MERN Stack
-For the ecommerce website, we have adopted the MERN stack, which comprises MongoDB, Express.js, React.js, and Node.js. This technology stack allows us to build a dynamic and user-friendly web application that leverages the power of both front-end and back-end technologies. Let's dive into the details of each component:
 
 
-2	Back-end Development (Node.js and Express.js):
-  set up a Node.js server using Express.js to handle incoming HTTP requests and responses. Express.js acts as the middleware to handle requests before routing them to the appropriate API endpoints. I implement RESTful APIs for user authentication, product management, shopping cart, and order processing. These APIs allow seamless communication between the front-end and back-end, enabling a responsive user experience.
-3	Front-end Development (React.js):
-Using Create React App or similar tools, we create a well-structured React.js project. This ensures a scalable and maintainable front-end codebase. We design and develop a user-friendly and responsive user interface for the ecommerce website. By creating reusable React components, we improve code reusability and modularity. React Router helps us manage client-side routing and navigation within the application..>
-4	User Authentication (Passport.js or JWT):
-For user authentication, we integrate either Passport.js for session-based authentication or JSON Web Tokens (JWT) for stateless authentication. User registration and login forms are implemented with validation and error handling. We use authentication middleware to protect routes that require user authentication, ensuring secure access to certain parts of the website.
+## Available Scripts
 
-5	Product Management and Database (MongoDB):
-We design the MongoDB schema to store product information, including name, description, price, images, and inventory status. CRUD operations (Create, Read, Update, Delete) are implemented in the Express.js APIs to manage products. Admin users have the privilege to add, edit, and remove products from the database, maintaining seamless product management.
+In the project directory, you can run:
 
-6	Shopping Cart and Checkout:
-The shopping cart functionality allows users to add products, update quantities, and remove items. The checkout process includes an order summary, shipping information, and secure payment integration with a third-party payment gateway like Stripe or PayPal. This facilitates a smooth and secure checkout experience for users.
+### `npn start`
 
-7	Third-party Integrations:
-We integrate third-party APIs, such as payment gateways, shipping providers, and geolocation services, to enhance the user experience. These integrations offer users multiple payment options, real-time shipping information, and location-based services.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-8	State Management (Redux or Context API):
-To manage application-level data efficiently, we implement state management using either Redux or React's Context API. Centralizing shopping cart, user authentication, and other relevant data ensures a consistent and synchronized user experience across the application.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-9	Front-end Testing (Jest and React Testing Library):
-We write comprehensive unit tests and integration tests for React components using Jest and React Testing Library. This testing approach ensures code reliability and maintainability, covering user interactions, API calls, and state changes to validate various scenarios.
+### `npm test`
 
-2.	Functional and Non-Functional Requirements
-2.1	Functional Requirements:
-1. User Registration and Authentication:
-   - Users should be able to register on the website with a unique username and password.
-   - Registered users should be able to log in and access their personalized accounts.
+Launches the test runner in the interactive watch mode.\
+.
 
-2. Product Catalog:
-   - The website should display a comprehensive catalog of products with details such as name, description, price, and images.
-   - Products should be categorized and easily searchable to facilitate user navigation.
+### `npm run build`
 
-3. Shopping Cart and Checkout:
-   - Users should be able to add products to their shopping cart and review cart contents before proceeding to checkout.
-   - During the checkout process, users should provide shipping and billing information and choose a payment method.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-4. Order Management:
-   - The website should allow users to view their order history and track the status of current orders.
-   - Admin users should have the ability to manage and process orders, update their status, and generate invoices.
-
-5. Payment Gateway Integration:
-   - The website should integrate with a secure payment gateway to process online transactions.
-   - Users should have multiple payment options, such as credit/debit cards, PayPal, or other relevant payment methods.
-
-6. Customer Reviews and Ratings:
-   - Users should be able to leave reviews and ratings for products they have purchased.
-   - Average product ratings should be displayed to assist other users in making purchase decisions.
-
-7. Product Recommendations:
-   - The website should provide personalized product recommendations based on user browsing and purchase history.
-   - Recommended products should appear on the homepage or product pages.
-
-8. Wishlist and Favorites:
-   - Users should have the option to add products to their wishlist or favorites list for future reference.
-   - Wishlist items should be easily managed and shareable.
-
-9. Inventory Management:
-   - The website should track product inventory and display availability to users.
-   - Users should be notified when a product is out of stock or low in quantity.
-
-10. Order Confirmation and Email Notifications:
-    - Users should receive an order confirmation email after completing a purchase.
-    - Email notifications should be sent for order updates, such as shipping and delivery status..
-2.2	Non-Functional Requirements
-1. Performance:
-   - The website should load quickly, with minimal page load times, to enhance user experience.
-   - It should be able to handle a large number of concurrent users without significant performance degradation.
-
-2. Security:
-   - User data, including personal information and payment details, should be encrypted and stored securely.
-   - The website should be protected against common security threats, such as SQL injection and cross-site scripting (XSS) attacks.
-
-3. Scalability:
-   - The system should be designed to accommodate future growth and increased traffic.
-   - It should be scalable to handle a larger product catalog and user base without compromising performance.
-
-4. Accessibility:
-   - The website should be accessible to users with disabilities, following WCAG (Web Content Accessibility Guidelines) standards.
-   - It should support screen readers, keyboard navigation, and other accessibility features.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
 
-5. Reliability and Availability:
-   - The website should have high uptime and be available to users at all times, with minimal downtime for maintenance.
+### `npm run eject`
 
-6. User-Friendly Interface:
-   - The website's user interface should be intuitive and easy to navigate, ensuring a positive user experience.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-7. Compliance:
-   - The website should adhere to relevant industry standards, data protection regulations (e.g., GDPR), and legal requirements.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-8. Backup and Recovery:
-   - Regular data backups should be performed to prevent data loss in case of system failures.
-   - A robust data recovery mechanism should be in place to restore the website in the event of any unforeseen issues.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-9. Performance Monitoring and Analytics:
-    - The website should have performance monitoring tools to track user behavior, identify bottlenecks, and gather insights for continuous improvement.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-These requirements serve as a foundation for the development of the ecommerce website, ensuring it meets the needs of users while adhering to essential performance, security, and usability standards.
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
 
